@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Por qué y para qué? | Alejandro Estrada Romero</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container brand">
+      <h1>¿Por qué y para qué?</h1>
+      <a class="home-link" href="index.html">← Volver al inicio</a>
+    </div>
+  </header>
+
+  <main class="container section-page">
+    <p class="section-intro">Un poquito de mi historia, a dónde quiero llegar y cuál es mi visión...</p>
+
+    <section class="record-list">
+
+         <article class="panel record-card">
+          <div class="record-photo">
+  <img src="yo.png" onclick="openLightbox(this.src)"style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+</div>
+          <div class="record-content">
+            <h3>Un poco sobre mí...</h3>
+            <p>Mi formación en Finanzas me ha permitido <strong>desarrollar</strong> un criterio sólido para analizar información, <strong>identificar</strong> riesgos y entender el funcionamiento real de las empresas. <strong>Valoro</strong> profundamente el aprendizaje continuo, la responsabilidad y la <strong>iniciativa</strong>; siempre he buscado cómo complementar mis estudios y ser alguien curioso con hambre de más. No me quedo con lo que veo en clase, también busco aplicarlo y seguir <strong>creciendo</strong>. Considero que la excelencia académica no solo implica desempeño, sino también <strong>consistencia</strong> y capacidad de ejecución, cualidades que reflejo en mi desarrollo profesional y que me posicionan como un <strong>candidato</strong> <strong>sólido</strong> para esta beca.</p>
+          </div>
+        </article>
+
+<article class="panel record-card">
+          <div class="record-photo">
+  <img src="esc.jpg" onclick="openLightbox(this.src)"style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+</div>
+          <div class="record-content">
+            <h3>¿Qué haría con la beca?</h3>
+            <p>Mi mayor meta es poder pagarme el crédito académico, completar mi certificación CFA, inscribirme al CFI y poder darle una pequeña sorpresa a mi familia. Es por eso que así aplicaría la beca:</p>
+            <p><strong>50%</strong> para pagar mi crédito académico.</p>
+            <p><strong>23%</strong> para mi certificación certificación CFA </p>
+            <P><strong>10%</strong> para mi registro al CFI</P>
+            <P><strong>10%</strong> agradecimiento a mi familia</P>
+            <p><strong>7%</strong> inversiones y proyectos con causa social</p>
+            
+          </div>
+        </article>
+
+  </main>
+  
+  
+  <div id="lightbox" 
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+            background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+
+  <img id="lightbox-img" 
+       style="max-width:90%; max-height:90%; border-radius:10px;"
+       onclick="event.stopPropagation();">
+</div>
+ 
+ <script>
+function openLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+
+  lightbox.style.display = 'flex';
+  img.src = src;
+}
+
+// cerrar cuando haces click en el fondo (no en la imagen)
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+  }
+});
+</script> 
+  
+</body>
+</html>
